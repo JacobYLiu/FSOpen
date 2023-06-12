@@ -1,0 +1,11 @@
+title new note for spa
+
+user-->browser: entered body for new SPA note
+
+user-->browser: entered new spa note title
+user-->browser: pressed submit button
+
+browser-->browser: executes the event handler and returns new note on browser
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server->browser: 201 created

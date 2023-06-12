@@ -1,0 +1,23 @@
+new title for notes
+
+user->browser: enters note title in text field
+user->browser: clicks submit
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+server->browser: 302 Found redirects to https://studies.cs.helsinki.fi/exampleapp/note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+browser fetches note body and reloads the note page
+
+browser->server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server->browser: main.css file
+
+browser->server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server->browser: main.js file
+
+browser->server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server->browser: data.json file
+
+note body is POST on request and accessing the note page
+server->browser: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+
+Note right of browser: The browser executes the callback function that renders the notes
